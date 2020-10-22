@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">kotlinTraining</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello Home fragment</string>
+    <string name="hello_second_fragment">Hello Second fragment</string>
+    <string name="go_to_second_fragment">go to second fragment</string>
+</resources>

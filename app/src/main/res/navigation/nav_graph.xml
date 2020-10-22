@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeDestinationFragment">
+
+    <fragment
+        android:id="@+id/homeDestinationFragment"
+        android:name="com.mada.kotlintraining.HomeDestinationFragment"
+        android:label="fragment_home_destination"
+        tools:layout="@layout/fragment_home_destination" >
+        <action
+            android:id="@+id/action_homeDestinationFragment_to_secondDestinationFragment"
+            app:destination="@id/secondDestinationFragment"
+            app:exitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondDestinationFragment"
+        android:name="com.mada.kotlintraining.SecondDestinationFragment"
+        android:label="fragment_second_destination"
+        tools:layout="@layout/fragment_second_destination" />
+</navigation>
