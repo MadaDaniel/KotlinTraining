@@ -99,9 +99,9 @@ class SecondDestinationFragment : Fragment(), RecyclerAdapter.OnItemClickListene
     override fun onItemClick(position: Int) {
         view?.let {
 
-            it.findNavController().navigate(R.id.itemDetailFragment, bundleOf("position" to position))
-            Snackbar.make(it, "It works $position", Snackbar.LENGTH_SHORT)
-                .show()
+            it.findNavController()
+                .navigate(R.id.itemDetailFragment, bundleOf("position" to position))
+
         }
     }
 }
