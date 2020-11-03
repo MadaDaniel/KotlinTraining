@@ -19,5 +19,16 @@
         android:id="@+id/secondDestinationFragment"
         android:name="com.mada.kotlintraining.SecondDestinationFragment"
         android:label="fragment_second_destination"
-        tools:layout="@layout/fragment_second_destination" />
+        tools:layout="@layout/fragment_second_destination" >
+
+
+        <action
+            android:id="@+id/action_secondDestinationFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.mada.kotlintraining.ItemDetailFragment"
+        android:label="fragment_item_detail"
+        tools:layout="@layout/fragment_item_detail" />
 </navigation>
