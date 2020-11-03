@@ -5,10 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.app.BundleCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -95,6 +98,8 @@ class SecondDestinationFragment : Fragment(), RecyclerAdapter.OnItemClickListene
 
     override fun onItemClick(position: Int) {
         view?.let {
+
+            it.findNavController().navigate(R.id.itemDetailFragment, bundleOf("position" to position))
             Snackbar.make(it, "It works $position", Snackbar.LENGTH_SHORT)
                 .show()
         }
