@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/text_view_1"
             android:layout_centerInParent="true"
-            android:text="Line 2"
             android:textAlignment="center" />
 
         <TextView
