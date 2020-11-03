@@ -54,7 +54,7 @@ class RecyclerAdapter(val context: Context?, private val lister: OnItemClickList
         val beerTitle: TextView = itemView!!.findViewById(R.id.text_view_1)
         val tagLine: TextView = itemView!!.findViewById(R.id.text_view_2)
         val abv: TextView = itemView!!.findViewById(R.id.text_view_3)
-        val brewers_tips: TextView = itemView!!.findViewById(R.id.text_view_4)
+        //val brewers_tips: TextView = itemView!!.findViewById(R.id.text_view_4)
         val beerImage: ImageView = itemView!!.findViewById(R.id.image_view)
 
         init {
