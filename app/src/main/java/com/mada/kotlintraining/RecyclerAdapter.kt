@@ -1,6 +1,8 @@
 package com.mada.kotlintraining
 
 import android.content.Context
+import android.provider.Settings.System.getString
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,12 +29,13 @@ class RecyclerAdapter(val context: Context?, private val lister: OnItemClickList
 
     override fun onBindViewHolder(holder: RecyclerAdapter.MyViewHolder, position: Int) {
 
-        holder.beerTitle.text = beerList.get(position).get(position).name
-        holder.tagLine.text = beerList.get(position).get(position).tagline
-        holder.abv.text = beerList.get(position).get(position).abv.toString() + " %"
+        var currentItem = beerList.get(position).get(position)
+        holder.beerTitle.text = currentItem.name
+        holder.tagLine.text = currentItem.tagline
+        holder.abv.text = context?.getString(R.string.alcohol_volume, currentItem.abv)
         //holder.brewers_tips.text = beerList.get(position).get(position).brewers_tips
 
-        Glide.with(context).load(beerList.get(position).get(position).image_url)
+        Glide.with(context).load(currentItem.image_url)
             .apply(RequestOptions().centerCrop())
             .apply(RequestOptions().centerInside())
             .into(holder.beerImage)
